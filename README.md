@@ -32,3 +32,19 @@ brand, address, phone, opening hours). `places.tsv` lists the files, their sizes
 - Made by DYNOMATRIX from Geofabrik's OpenStreetMap extract (https://download.geofabrik.de) - each file says the date.
 - These files are a database shared under the same ODbL license: you may use and share them, credit
   OpenStreetMap contributors, and keep any changed version under the ODbL. Each file starts with the same notice.
+
+## Truck trouble-spot files
+
+For the semi truck (only when it is the rider's vehicle), the same squares also have a trouble-spot file - low
+clearances, weight-limited and closed bridges - that truck routes steer round:
+
+    https://github.com/vanmax1313/dynomatrix-road-files/releases/latest/download/<square>.truck.gz
+
+`W85_N35.truck.gz` is a gzip'd text file, one small circle per line (latitude, longitude, radius in metres, kind - H
+height, W weight, C closed -, the limit in metres or metric tons, source, id). `truck_spots.tsv` lists the files.
+
+- Map data (c) OpenStreetMap contributors, available under the Open Database License (ODbL) 1.0 -
+  https://www.openstreetmap.org/copyright - from Geofabrik's state extracts.
+- Bridges from the FHWA National Bridge Inventory (2025) - US public domain.
+- These files are a database shared under the same ODbL license. Advisory only: drivers check posted clearances and
+  weight limits.
